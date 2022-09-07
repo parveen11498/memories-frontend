@@ -23,7 +23,7 @@ useEffect(()=>{
   if(post){
     dispatch(getPostsBySearch({search:'none', tags:post?.tags.join(',')}));
   }
-},[post]);
+},[post, dispatch]);
 
 if(!post) return null;
 

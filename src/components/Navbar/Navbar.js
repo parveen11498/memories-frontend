@@ -30,7 +30,7 @@ const Navbar = () => {
     }
       setUser(JSON.parse(localStorage.getItem('profile')))
      
-  },[location])
+  },[location, user.token, logout])
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">

@@ -9,7 +9,7 @@ import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 
 const App = () => {
-const user=JSON.parse(localStorage.getItem('profile'))
+
 
   return (
    <GoogleOAuthProvider  clientId="743234492811-feci0tsiscn0a0upoa5gj8bsnifflerh.apps.googleusercontent.com">
