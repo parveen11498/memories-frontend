@@ -9,7 +9,7 @@ import memoriesText from '../../images/memories-Text.png';
 const Navbar = () => {
   const navigate = useNavigate();
   const classes = useStyles();
-  const [user, setUser ]= useState(JSON.parse(localStorage.getItem('profile')));;
+  const [user, setUser ]= useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch=useDispatch();
   const location=useLocation();
   

@@ -6,6 +6,7 @@ import {GoogleOAuthProvider} from '@react-oauth/google';
 import PostDetails from './components/PostDetais/PostDetails';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
+
 import Auth from './components/Auth/Auth';
 
 const App = () => {
@@ -18,10 +19,13 @@ const App = () => {
     <BrowserRouter >
        <Container maxWidth="xl">
      <Navbar/>
+   
     <Routes>
 
-      <Route path="/" exact element={<Navigate replace to="/posts" />}/>
+      <Route path="/" exact element={<Navigate replace to="/auth" />}/>
       <Route path='/posts' exact element={<Home/>}/>
+     
+
       <Route path='/posts/search' exact element={<Home/>}/>
       <Route path="/posts/:id"  element={<PostDetails/>}/>
       <Route path="/auth" element={<Auth/>}/>
