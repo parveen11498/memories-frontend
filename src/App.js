@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 
 import Auth from './components/Auth/Auth';
+const user = JSON.parse(localStorage.getItem('profile'));
+
 
 const App = () => {
 
@@ -22,15 +24,14 @@ const App = () => {
    
     <Routes>
 
-      <Route path="/" exact element={<Navigate replace to="/auth" />}/>
+      <Route path="/" exact element={<Navigate replace to="/posts" />}/>
       <Route path='/posts' exact element={<Home/>}/>
      
 
       <Route path='/posts/search' exact element={<Home/>}/>
       <Route path="/posts/:id"  element={<PostDetails/>}/>
-      <Route path="/auth" element={<Auth/>}/>
-      {/* <Route path="/auth" element={( !user?<Auth/>:<Navigate replace to="/posts"/>)}/> */}
-      {/* <Route path="/" e<Route path='/posts'exact component={<Home/>}/>lement={<Navigate replace to="/auth" />}></Route> */}
+      <Route path="/auth" exact element={<Auth/>}/>
+      <Route path="/auth" exact element={()=>( !user?<Auth/>:<Navigate replace to="/posts"/>)}/>
 
   </Routes>
     </Container>
