@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API=  axios.create({baseURL:'https://memories-backend-beta.vercel.app/'});
+const API=  axios.create({baseURL:'https://memories-frontend-cyuk.onrender.com'});
 
 
 API.interceptors.request.use((req)=>{
